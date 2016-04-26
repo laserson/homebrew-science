@@ -15,7 +15,7 @@ class Seqan < Formula
 
   def install
     include.install "include/seqan"
-    share.install Dir["share/*"]
+    pkgshare.install Dir["share/*"] unless build.head?
   end
 
   test do
